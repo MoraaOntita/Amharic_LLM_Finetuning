@@ -4,6 +4,7 @@ from peft import LoraConfig
 from utils.config import model_name, checkpoint, commit_hash, use_4bit, bnb_4bit_compute_dtype, bnb_4bit_quant_type, use_nested_quant, lora_r, lora_alpha, lora_dropout
 from transformers import PeftModel
 
+
 def load_tokenizer():
     """
     Load and return the tokenizer.
@@ -72,11 +73,7 @@ def main():
     print("Token embeddings resized successfully.")
 
     # Load Peft model
-    peft_model = load_peft_model(
-        llama_model=model_name,
-        pretrained_model_name_or_path=checkpoint,
-        revision=commit_hash
-    )
+    peft_model = load_peft_model(tokenizer)
     print("Peft model loaded successfully.")
 
 if __name__ == "__main__":

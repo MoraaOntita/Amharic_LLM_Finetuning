@@ -1,10 +1,5 @@
-# config.py
-
 # Model configuration
-model_name = "meta-llama/Llama-2-7b-hf"  # Name of the pre-trained model
-checkpoint = "iocuydi/llama-2-amharic-3784m"  # Checkpoint for the model
-commit_hash = "04fcac974701f1dab0b8e39af9d3ecfce07b3773"  # Commit hash for the model
-
+MODEL_NAME = "NousResearch/Llama-2-7b-hf"
 
 # QLoRA parameters
 LORA_R = 64
