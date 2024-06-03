@@ -39,7 +39,7 @@ def configure_lora(r=64, alpha=16, dropout=0.1):
     return lora_config
 
 if __name__ == "__main__":
-    from config import model_name, use_4bit, bnb_4bit_compute_dtype, bnb_4bit_quant_type, use_nested_quant, lora_r, lora_alpha, lora_dropout
+    from utils.config import model_name, use_4bit, bnb_4bit_compute_dtype, bnb_4bit_quant_type, use_nested_quant, lora_r, lora_alpha, lora_dropout
 
     # Load tokenizer
     tokenizer = load_tokenizer(model_name)
